@@ -21,7 +21,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/homepage");
+        const response = await axios.get("https://localhost:8080/homepage");
         console.log(response.data);
         setBanners(response.data.bannerList);
         setHotProducts(response.data.productList);

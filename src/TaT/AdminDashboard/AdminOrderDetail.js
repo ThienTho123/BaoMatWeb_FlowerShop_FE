@@ -12,7 +12,7 @@ const AdminOrderDetail = ({ orderID }) => {
   useEffect(() => {
     const fetchOrderDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/admin/orderdetail`, {
+        const response = await fetch(`https://localhost:8080/api/v1/admin/orderdetail`, {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -90,7 +90,7 @@ const AdminOrderDetail = ({ orderID }) => {
   
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/orderdetail/${orderDetailId}`,
+        `https://localhost:8080/api/v1/admin/orderdetail/${orderDetailId}`,
         {
           method: "PUT",
           headers: {
@@ -120,7 +120,7 @@ const AdminOrderDetail = ({ orderID }) => {
   const handleSoftDelete = async (orderDetailId) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/orderdetail/softdelete/${orderDetailId}`,
+        `https://localhost:8080/api/v1/admin/orderdetail/softdelete/${orderDetailId}`,
         {
           method: "DELETE",
           headers: {
@@ -148,7 +148,7 @@ const AdminOrderDetail = ({ orderID }) => {
   const handleHardDelete = async (orderDetailId) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/orderdetail/harddelete/${orderDetailId}`,
+        `https://localhost:8080/api/v1/admin/orderdetail/harddelete/${orderDetailId}`,
         {
           method: "DELETE",
           headers: {

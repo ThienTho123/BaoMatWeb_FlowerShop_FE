@@ -17,7 +17,7 @@ const PurchaseHistory = () => {
 
   const getPurchaseHistory = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/account/bought", {
+      const response = await axios.get("https://localhost:8080/account/bought", {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -59,7 +59,7 @@ const PurchaseHistory = () => {
       }
 
       await axios.post(
-        "http://localhost:8080/review",
+        "https://localhost:8080/review",
         {
           flower: { flowerID: selectedProductId },
           comment,
@@ -87,7 +87,7 @@ const PurchaseHistory = () => {
       }
 
       await axios.post(
-        "http://localhost:8080/review",
+        "https://localhost:8080/review",
         {
           flower: { flowerID: selectedProductId },
           comment,
@@ -113,7 +113,7 @@ const PurchaseHistory = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/upload",
+        "https://localhost:8080/api/v1/upload",
         formData,
         {
           headers: {
@@ -160,7 +160,7 @@ const PurchaseHistory = () => {
 
   const handleDeleteReview = async (reviewId) => {
     try {
-      await axios.delete(`http://localhost:8080/review/${reviewId}`, {
+      await axios.delete(`https://localhost:8080/review/${reviewId}`, {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },

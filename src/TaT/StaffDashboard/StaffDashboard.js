@@ -24,7 +24,7 @@ const StaffDashboard = () => {
     // Lấy thông tin tài khoản
     if (accountID && accesstoken) {
       fetch(
-        `http://localhost:8080/api/v1/auth/account?accountID=${accountID}`,
+        `https://localhost:8080/api/v1/auth/account?accountID=${accountID}`,
         {
           headers: {
             Authorization: `Bearer ${accesstoken}`,

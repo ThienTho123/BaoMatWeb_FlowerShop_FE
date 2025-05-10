@@ -12,7 +12,7 @@ const AdminOrderDetail = ({ orderID }) => {
   useEffect(() => {
     const fetchOrderDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/staff/orderdetail`, {
+        const response = await fetch(`https://localhost:8080/api/v1/staff/orderdetail`, {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },

@@ -42,7 +42,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/detail/${id}`);
+        const response = await axios.get(`https://localhost:8080/detail/${id}`);
         if (response.status === 200) {
           const {
             product,
@@ -114,7 +114,7 @@ const ProductDetail = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8080/addToPrebuy",
+        "https://localhost:8080/addToPrebuy",
         {
           productSizeID: productSizeID,
           accountID: accountID, 
@@ -170,7 +170,7 @@ const ProductDetail = () => {
       console.log(productSizes[selectedSizeIndex]); // Kiểm tra dữ liệu ở đây
 
       const response = await axios.post(
-        "http://localhost:8080/addToPrebuy",
+        "https://localhost:8080/addToPrebuy",
         {
           productSizeID: productSizeID,
           accountID: null,
@@ -216,7 +216,7 @@ const ProductDetail = () => {
         const token = localStorage.getItem("access_token");
         if (!token) return;
   
-        const response = await axios.get("http://localhost:8080/wishlist", {
+        const response = await axios.get("https://localhost:8080/wishlist", {
           headers: { Authorization: `Bearer ${token}` },
         });
   
@@ -354,7 +354,7 @@ const ProductDetail = () => {
       if (isInWishlist) {
         // Xóa sản phẩm khỏi wishlist
         try {
-          await axios.delete(`http://localhost:8080/wishlist/${wishlistID}`, {
+          await axios.delete(`https://localhost:8080/wishlist/${wishlistID}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
   
@@ -369,7 +369,7 @@ const ProductDetail = () => {
         // Thêm sản phẩm vào wishlist
         try {
           const response = await axios.post(
-            "http://localhost:8080/addToWishlist",
+            "https://localhost:8080/addToWishlist",
             { flowerID: product.flowerID },
             {
               headers: { Authorization: `Bearer ${token}` },

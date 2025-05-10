@@ -65,7 +65,7 @@ const Dashboard = () => {
     // Lấy thông tin tài khoản
     if (accountID && accesstoken) {
       fetch(
-        `http://localhost:8080/api/v1/auth/account?accountID=${accountID}`,
+        `https://localhost:8080/api/v1/auth/account?accountID=${accountID}`,
         {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
@@ -92,7 +92,7 @@ const Dashboard = () => {
     const fetchOrders = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/v1/admin/order",
+          "https://localhost:8080/api/v1/admin/order",
           {
             headers: {
               Authorization: `Bearer ${accesstoken}`,
@@ -118,7 +118,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (accesstoken) {
-      fetch("http://localhost:8080/api/v1/admin/dashboard", {
+      fetch("https://localhost:8080/api/v1/admin/dashboard", {
         headers: { Authorization: `Bearer ${accesstoken}` },
       })
         .then((response) => response.json())
@@ -134,7 +134,7 @@ const Dashboard = () => {
     const fetchReviews = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/v1/admin/review",
+          "https://localhost:8080/api/v1/admin/review",
           {
             headers: {
               Authorization: `Bearer ${accesstoken}`,
@@ -248,7 +248,7 @@ const Dashboard = () => {
   };
 
   const handleLogout = () => {
-    fetch("http://localhost:8080/api/v1/auth/logout", {
+    fetch("https://localhost:8080/api/v1/auth/logout", {
       method: "GET",
       credentials: "include",
     })

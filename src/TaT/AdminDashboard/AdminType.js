@@ -13,7 +13,7 @@ const AdminType = () => {
   useEffect(() => {
     const fetchTypes = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/type", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/type", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -37,7 +37,7 @@ const AdminType = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/type/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/type/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -64,7 +64,7 @@ const AdminType = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/type/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/type/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -92,7 +92,7 @@ const AdminType = () => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/admin/type/${id}`, {
+      const response = await fetch(`https://localhost:8080/api/v1/admin/type/${id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -122,7 +122,7 @@ const AdminType = () => {
         setError("Tiêu thụ tối thiểu phải lớn hơn 0.");
         return;
       }
-      const response = await fetch("http://localhost:8080/api/v1/admin/type", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/type", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

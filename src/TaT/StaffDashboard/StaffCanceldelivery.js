@@ -33,7 +33,7 @@ const StaffCancelDelivery = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:8080/staffmanager/cancelprocessing", {
+        const response = await fetch("https://localhost:8080/staffmanager/cancelprocessing", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -55,8 +55,8 @@ const StaffCancelDelivery = () => {
 
   const handleAction = async (orderID, isAccepted) => {
     const apiEndpoint = isAccepted
-      ? "http://localhost:8080/staffmanager/cancelprocessing/yes"
-      : "http://localhost:8080/staffmanager/cancelprocessing/no";
+      ? "https://localhost:8080/staffmanager/cancelprocessing/yes"
+      : "https://localhost:8080/staffmanager/cancelprocessing/no";
 
     try {
       const response = await fetch(apiEndpoint, {

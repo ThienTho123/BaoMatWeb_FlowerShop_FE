@@ -47,7 +47,7 @@ const ChangePassword = () => {
   const handleChangePassword = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:8080/account/changepassword",
+        "https://localhost:8080/account/changepassword",
         {
           curpass: passwordForm.currentPassword,
           newpass: passwordForm.newPassword,

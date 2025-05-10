@@ -21,7 +21,7 @@ const AdminNews = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/news", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/news", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -54,7 +54,7 @@ const AdminNews = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -83,7 +83,7 @@ const AdminNews = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/news/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/news/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -110,7 +110,7 @@ const AdminNews = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/news/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/news/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -135,7 +135,7 @@ const AdminNews = () => {
   const handleSave = async (id, newsData) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/news/${id}`,
+        `https://localhost:8080/api/v1/admin/news/${id}`,
         {
           method: "PUT",
           headers: {
@@ -175,7 +175,7 @@ const AdminNews = () => {
   
       console.log("Creating news with data: ", JSON.stringify(newNewsWithFormattedDate, null, 2));  // In ra JSON để kiểm tra
   
-      const response = await fetch("http://localhost:8080/api/v1/admin/news", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/news", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

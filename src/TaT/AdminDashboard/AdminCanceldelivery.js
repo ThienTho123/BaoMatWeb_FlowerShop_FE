@@ -33,7 +33,7 @@ const AdminCancelDelivery = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:8080/adminmanager/cancelprocessing", {
+        const response = await fetch("https://localhost:8080/adminmanager/cancelprocessing", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -55,8 +55,8 @@ const AdminCancelDelivery = () => {
 
   const handleAction = async (orderID, isAccepted) => {
     const apiEndpoint = isAccepted
-      ? "http://localhost:8080/adminmanager/cancelprocessing/yes"
-      : "http://localhost:8080/adminmanager/cancelprocessing/no";
+      ? "https://localhost:8080/adminmanager/cancelprocessing/yes"
+      : "https://localhost:8080/adminmanager/cancelprocessing/no";
 
     try {
       const response = await fetch(apiEndpoint, {

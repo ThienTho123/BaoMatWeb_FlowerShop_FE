@@ -22,7 +22,7 @@ const ProcessingComment = () => {
   const getCommentInfo = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/staffaccount/commentprocess",
+        "https://localhost:8080/staffaccount/commentprocess",
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

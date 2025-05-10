@@ -27,7 +27,7 @@ const StaffFlowerSize = () => {
   useEffect(() => {
     const fetchFlowerSizes = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/staff/flowersize", {
+        const response = await fetch("https://localhost:8080/api/v1/staff/flowersize", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -49,7 +49,7 @@ const StaffFlowerSize = () => {
   
     const fetchFlowerOptions = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/staff/flower", {
+        const response = await fetch("https://localhost:8080/api/v1/staff/flower", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -107,7 +107,7 @@ const StaffFlowerSize = () => {
         return;
       }
       
-      const response = await fetch("http://localhost:8080/api/v1/staff/flowersize", {
+      const response = await fetch("https://localhost:8080/api/v1/staff/flowersize", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -171,7 +171,7 @@ const StaffFlowerSize = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/flowersize/${id}`,
+        `https://localhost:8080/api/v1/staff/flowersize/${id}`,
         {
           method: "PUT",
           headers: {
@@ -207,7 +207,7 @@ const StaffFlowerSize = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/flowersize/softdelete/${id}`,
+        `https://localhost:8080/api/v1/staff/flowersize/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {

@@ -31,7 +31,7 @@ const AllOrder = () => {
   const getCommentInfo = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/shipper",
+        "https://localhost:8080/shipper",
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

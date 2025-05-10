@@ -25,7 +25,7 @@ const AdminBanner = () => {
   useEffect(() => {
       const fetchBanners = async () => {
           try {
-              const response = await fetch("http://localhost:8080/api/v1/admin/banner", {
+              const response = await fetch("https://localhost:8080/api/v1/admin/banner", {
                   headers: {
                       Authorization: `Bearer ${accesstoken}`,
                   },
@@ -61,7 +61,7 @@ const AdminBanner = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -90,7 +90,7 @@ const AdminBanner = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/banner/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/banner/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -117,7 +117,7 @@ const AdminBanner = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/banner/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/banner/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -153,7 +153,7 @@ const AdminBanner = () => {
       };
 
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/banner/${id}`,
+        `https://localhost:8080/api/v1/admin/banner/${id}`,
         {
           method: "PUT",
           headers: {
@@ -194,7 +194,7 @@ const AdminBanner = () => {
         ...(purpose.purposeID && { purpose: purpose }),
       };
 
-      const response = await fetch("http://localhost:8080/api/v1/admin/banner", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/banner", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

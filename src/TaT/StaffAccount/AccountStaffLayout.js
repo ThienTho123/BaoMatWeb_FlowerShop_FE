@@ -13,7 +13,7 @@ const AccountStaffLayout = () => {
   // Hàm lấy thông tin người dùng từ API
   const getUserInfo = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/staffaccount", {
+      const response = await axios.get("https://localhost:8080/staffaccount", {
         params: { accountID },
         headers: { Authorization: `Bearer ${access_token}` },
       });
@@ -33,7 +33,7 @@ const AccountStaffLayout = () => {
 
   const handleLogout = () => {
     axios
-      .get("http://localhost:8080/api/v1/auth/logout", {
+      .get("https://localhost:8080/api/v1/auth/logout", {
         withCredentials: true,
       })
       .then((response) => {

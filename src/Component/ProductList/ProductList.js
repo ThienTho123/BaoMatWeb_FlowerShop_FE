@@ -37,7 +37,7 @@ export default function ProductList() {
 
   const fetchProducts = async (initialFilterParams) => {
     try {
-      const response = await axios.get("http://localhost:8080/flower");
+      const response = await axios.get("https://localhost:8080/flower");
   
       if (response.data) {
         const { flowers, category, purpose } = response.data;

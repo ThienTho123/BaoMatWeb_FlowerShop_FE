@@ -16,7 +16,7 @@ const AdminCommentType = () => {
   useEffect(() => {
     const fetchCommentTypes = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/commenttype", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/commenttype", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -42,7 +42,7 @@ const AdminCommentType = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/commenttype/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/commenttype/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -69,7 +69,7 @@ const AdminCommentType = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/commenttype/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/commenttype/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -95,7 +95,7 @@ const AdminCommentType = () => {
         throw new Error("Tên Loại không được để trống.");
       }
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/commenttype/${id}`,
+        `https://localhost:8080/api/v1/admin/commenttype/${id}`,
         {
           method: "PUT",
           headers: {
@@ -144,7 +144,7 @@ const AdminCommentType = () => {
       if (!newCommentType.commenttypename) {
         throw new Error("Tên Loại không được để trống.");
       }
-      const response = await fetch("http://localhost:8080/api/v1/admin/commenttype", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/commenttype", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

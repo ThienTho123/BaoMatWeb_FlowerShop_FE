@@ -80,7 +80,7 @@ const ProfileStaff = () => {
   const getUserInfor = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/auth/account",
+        "https://localhost:8080/api/v1/auth/account",
         {
           params: {
             accountID: accountID,
@@ -109,7 +109,7 @@ const ProfileStaff = () => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/v1/upload", formData, {
+      const response = await axios.post("https://localhost:8080/api/v1/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -129,7 +129,7 @@ const ProfileStaff = () => {
     console.log("avatarLink"+avatarLink);
     try {
       const response = await axios.put(
-        "http://localhost:8080/staffaccount/updateinfo",
+        "https://localhost:8080/staffaccount/updateinfo",
         {
           name: profileForm.name,
           email: profileForm.email,

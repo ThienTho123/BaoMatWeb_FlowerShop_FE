@@ -13,7 +13,7 @@ const AdminPurpose = () => {
   useEffect(() => {
     const fetchPurposes = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/purpose", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/purpose", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -37,7 +37,7 @@ const AdminPurpose = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/purpose/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/purpose/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -64,7 +64,7 @@ const AdminPurpose = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/purpose/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/purpose/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -88,7 +88,7 @@ const AdminPurpose = () => {
 
   const handleSave = async (id, purposeName, status) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/admin/purpose/${id}`, {
+      const response = await fetch(`https://localhost:8080/api/v1/admin/purpose/${id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -116,7 +116,7 @@ const AdminPurpose = () => {
 
   const handleCreate = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/v1/admin/purpose", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/purpose", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

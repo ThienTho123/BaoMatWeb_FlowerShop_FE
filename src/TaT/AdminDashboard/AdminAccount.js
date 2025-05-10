@@ -24,7 +24,7 @@ const AdminAccount = () => {
   useEffect(() => {
     const fetchAccounts = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/account", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/account", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -48,7 +48,7 @@ const AdminAccount = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/account/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/account/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -75,7 +75,7 @@ const AdminAccount = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/account/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/account/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -107,7 +107,7 @@ const AdminAccount = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/admin/account/${accountID}`, {
+      const response = await fetch(`https://localhost:8080/api/v1/admin/account/${accountID}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -159,7 +159,7 @@ const AdminAccount = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/admin/account", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/account", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

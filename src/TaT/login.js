@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/authenticate",
+        "https://localhost:8080/api/v1/auth/authenticate",
         {
           username,
           password,
@@ -86,7 +86,7 @@ const Login = () => {
   
         // Gửi thông tin tới backend để xử lý
         const backendResponse = await axios.post(
-          "http://localhost:8080/api/v1/auth/viagoogle",
+          "https://localhost:8080/api/v1/auth/viagoogle",
           googleTokenRequest,
           {
             headers: {

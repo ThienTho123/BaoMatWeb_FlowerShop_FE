@@ -47,7 +47,7 @@ const StaffCommentDetail = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/staff/${id}`, // URL API backend
+        `https://localhost:8080/staff/${id}`, // URL API backend
         repCommentDTO,
         {
           headers: {
@@ -90,7 +90,7 @@ const StaffCommentDetail = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/staffaccount/commentprocess/${id}`,
+        `https://localhost:8080/staffaccount/commentprocess/${id}`,
         repCommentDTO,
         {
           headers: {
@@ -119,7 +119,7 @@ const StaffCommentDetail = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:8080/staffaccount/commentprocess/${comment.commentID}/complete`,
+        `https://localhost:8080/staffaccount/commentprocess/${comment.commentID}/complete`,
         {},
         {
           headers: {
@@ -150,7 +150,7 @@ const StaffCommentDetail = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/upload",
+        "https://localhost:8080/api/v1/upload",
         formData,
         {
           headers: {
@@ -172,7 +172,7 @@ const StaffCommentDetail = () => {
   const getCommentDetail = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/staffaccount/comment/${id}`,
+        `https://localhost:8080/staffaccount/comment/${id}`,
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

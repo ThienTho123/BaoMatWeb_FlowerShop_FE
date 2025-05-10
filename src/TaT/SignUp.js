@@ -66,7 +66,7 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/auth/register', formData);
+      const response = await axios.post('https://localhost:8080/api/v1/auth/register', formData);
       console.log('User registered:', response.data);
       setSuccessMessage('Đăng ký thành công! Chuyển hướng tới trang đăng nhập...');
 

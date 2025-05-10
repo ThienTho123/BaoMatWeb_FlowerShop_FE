@@ -21,7 +21,7 @@ const StaffFlowerImage = () => {
   useEffect(() => {
     const fetchFlowerData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/staff/flower", {
+        const response = await fetch("https://localhost:8080/api/v1/staff/flower", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -39,7 +39,7 @@ const StaffFlowerImage = () => {
   
     const fetchFlowerImages = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/staff/flowerimage", {
+        const response = await fetch("https://localhost:8080/api/v1/staff/flowerimage", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -69,7 +69,7 @@ const StaffFlowerImage = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -97,7 +97,7 @@ const StaffFlowerImage = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/flowerimage/softdelete/${id}`,
+        `https://localhost:8080/api/v1/staff/flowerimage/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -123,7 +123,7 @@ const StaffFlowerImage = () => {
   const handleSave = async (id, imageData) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/flowerimage/${id}`,
+        `https://localhost:8080/api/v1/staff/flowerimage/${id}`,
         {
           method: "PUT",
           headers: {
@@ -154,7 +154,7 @@ const StaffFlowerImage = () => {
 
   const handleCreate = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/v1/staff/flowerimage", {
+      const response = await fetch("https://localhost:8080/api/v1/staff/flowerimage", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

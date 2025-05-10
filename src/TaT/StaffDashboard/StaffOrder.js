@@ -44,7 +44,7 @@ const StaffOrder = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/staff/order", {
+        const response = await fetch("https://localhost:8080/api/v1/staff/order", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -72,7 +72,7 @@ const StaffOrder = () => {
   const handleSoftDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/order/softdelete/${id}`,
+        `https://localhost:8080/api/v1/staff/order/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -99,7 +99,7 @@ const StaffOrder = () => {
   const handleHardDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/order/harddelete/${id}`,
+        `https://localhost:8080/api/v1/staff/order/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -142,7 +142,7 @@ const StaffOrder = () => {
       : null;
   
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/staff/order/${id}`, {
+      const response = await fetch(`https://localhost:8080/api/v1/staff/order/${id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

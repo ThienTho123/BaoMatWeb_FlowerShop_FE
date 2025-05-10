@@ -22,7 +22,7 @@ const CompleteComment = () => {
   const getCommentInfo = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/staffaccount/commentcomplete",
+        "https://localhost:8080/staffaccount/commentcomplete",
         {
           headers: {
             Authorization: `Bearer ${access_token}`,
@@ -76,7 +76,7 @@ const CompleteComment = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/comment",
+        "https://localhost:8080/comment",
         commentData,
         {
           headers: {
@@ -109,7 +109,7 @@ const CompleteComment = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/upload",
+        "https://localhost:8080/api/v1/upload",
         formData,
         {
           headers: {

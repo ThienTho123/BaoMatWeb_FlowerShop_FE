@@ -24,7 +24,7 @@ const AdminComment = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/comment", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/comment", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -57,7 +57,7 @@ const AdminComment = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -86,7 +86,7 @@ const AdminComment = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/comment/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/comment/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -113,7 +113,7 @@ const AdminComment = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/comment/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/comment/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -145,7 +145,7 @@ const AdminComment = () => {
       };
   
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/comment/${id}`,
+        `https://localhost:8080/api/v1/admin/comment/${id}`,
         {
           method: "PUT",
           headers: {
@@ -182,7 +182,7 @@ const AdminComment = () => {
         date: new Date(newComment.date).toISOString().split(".")[0], // Định dạng ISO 8601 nhưng không có mili giây
       };
   
-      const response = await fetch("http://localhost:8080/api/v1/admin/comment", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/comment", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

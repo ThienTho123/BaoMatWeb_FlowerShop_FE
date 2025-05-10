@@ -25,7 +25,7 @@ const AdminReview = () => {
     const fetchReviews = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/v1/admin/review",
+          "https://localhost:8080/api/v1/admin/review",
           {
             headers: {
               Authorization: `Bearer ${accesstoken}`,
@@ -57,7 +57,7 @@ const AdminReview = () => {
     formData.append("file", file);
   
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: { Authorization: `Bearer ${accesstoken}` },
         credentials: "include",
@@ -111,7 +111,7 @@ const AdminReview = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/review/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/review/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -138,7 +138,7 @@ const AdminReview = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/review/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/review/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -195,7 +195,7 @@ const AdminReview = () => {
       console.log("JSON data to be sent via PUT:", JSON.stringify(formattedReviewData, null, 2));
   
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/review/${id}`,
+        `https://localhost:8080/api/v1/admin/review/${id}`,
         {
           method: "PUT",
           headers: {
@@ -251,7 +251,7 @@ const AdminReview = () => {
       // In ra JSON trước khi gửi
       console.log("Review data to be sent:", JSON.stringify(reviewData, null, 2));
   
-      const response = await fetch("http://localhost:8080/api/v1/admin/review", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/review", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

@@ -20,7 +20,7 @@ const PreBuy = () => {
 
   useEffect(() => {
     if (accesstoken) {
-      fetch("http://localhost:8080/prebuy", {
+      fetch("https://localhost:8080/prebuy", {
         headers: {
           Authorization: `Bearer ${accesstoken}`,
         },
@@ -80,7 +80,7 @@ const PreBuy = () => {
 
   useEffect(() => {
     if (accesstoken) {
-      fetch("http://localhost:8080/prebuy", {
+      fetch("https://localhost:8080/prebuy", {
         headers: {
           Authorization: `Bearer ${accesstoken}`,
         },
@@ -192,7 +192,7 @@ const PreBuy = () => {
       size: size.trim(),
     };
 
-    fetch(`http://localhost:8080/prebuy/${cartID}`, {
+    fetch(`https://localhost:8080/prebuy/${cartID}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${accesstoken}`,
@@ -224,7 +224,7 @@ const PreBuy = () => {
       "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?"
     );
     if (confirmDelete) {
-      fetch(`http://localhost:8080/prebuy/${cartID}`, {
+      fetch(`https://localhost:8080/prebuy/${cartID}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -261,7 +261,7 @@ const PreBuy = () => {
     return appliedDiscount; // Sử dụng giá trị giảm giá đã áp dụng
   };
   const deleteDiscount = (discountID) => {
-    fetch(`http://localhost:8080/api/v1/admin/discount/${discountID}`, {
+    fetch(`https://localhost:8080/api/v1/admin/discount/${discountID}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${accesstoken}`,
@@ -408,7 +408,7 @@ const PreBuy = () => {
       note: buyInfo.note,
     };
   
-    const url = `http://localhost:8080/prebuy/buy?${params.toString()}`;
+    const url = `https://localhost:8080/prebuy/buy?${params.toString()}`;
   
     console.log("POST URL:", url);
     console.log("Body JSON gửi đến API:", buyInfoBody);
@@ -520,7 +520,7 @@ const PreBuy = () => {
     console.log("Body JSON gửi đến API /setCart:", buyInfoBody);
   
     // Thực hiện các bước gửi dữ liệu và thanh toán
-    fetch(`http://localhost:8080/setCart?${queryParams}`, {
+    fetch(`https://localhost:8080/setCart?${queryParams}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -537,7 +537,7 @@ const PreBuy = () => {
       .then(() => {
         const totalPayment = prices.reduce((sum, price) => sum + price, 0);
         console.log("Tổng thanh toán (đã giảm giá):", totalPayment);
-        return fetch(`http://localhost:8080/pay?totalPayment=${totalPayment}`, {
+        return fetch(`https://localhost:8080/pay?totalPayment=${totalPayment}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${accesstoken}`,

@@ -31,7 +31,7 @@ const HistoryOrder = () => {
   const getHistoryOrder = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/account/orderHistory",
+        "https://localhost:8080/account/orderHistory",
         {
           headers: {
             Authorization: `Bearer ${access_token}`,
@@ -70,7 +70,7 @@ const HistoryOrder = () => {
     setShowConfirm(false);
     try {
       const response = await axios.delete(
-        "http://localhost:8080/account/cancel",
+        "https://localhost:8080/account/cancel",
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

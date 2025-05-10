@@ -33,7 +33,7 @@ const AdminDelivery = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/adminmanager/ordernoship", {
+        const response = await fetch("https://localhost:8080/adminmanager/ordernoship", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -63,7 +63,7 @@ const AdminDelivery = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/adminmanager/ordernoship/ship", {
+      const response = await fetch("https://localhost:8080/adminmanager/ordernoship/ship", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

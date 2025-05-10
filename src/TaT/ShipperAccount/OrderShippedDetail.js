@@ -30,7 +30,7 @@ const OrderShippedDetail = () => {
   const getHistoryOrder = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/shipperaccount/ordership/${id}`,
+        `https://localhost:8080/shipperaccount/ordership/${id}`,
         {
           headers: {
             Authorization: `Bearer ${access_token}`,
@@ -92,7 +92,7 @@ const OrderShippedDetail = () => {
     try {
       const response = await axios.request({
         method: "GET",
-        url: `http://localhost:8080/shipperaccount/haveship/${orderHistory[0]?.id}/start`,
+        url: `https://localhost:8080/shipperaccount/haveship/${orderHistory[0]?.id}/start`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -108,7 +108,7 @@ const OrderShippedDetail = () => {
     try {
       const response = await axios.request({
         method: "GET",
-        url: `http://localhost:8080/shipperaccount/haveship/${orderHistory[0]?.id}/success`,
+        url: `https://localhost:8080/shipperaccount/haveship/${orderHistory[0]?.id}/success`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -125,7 +125,7 @@ const OrderShippedDetail = () => {
     try {
       const response = await axios.request({
         method: "GET",
-        url: `http://localhost:8080/shipperaccount/haveship/${orderHistory[0]?.id}/fail`,
+        url: `https://localhost:8080/shipperaccount/haveship/${orderHistory[0]?.id}/fail`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },

@@ -23,7 +23,7 @@ const SendComment = () => {
   // Lấy thông tin danh sách bình luận và loại bình luận
   const getCommentInfo = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/comment", {
+      const response = await axios.get("https://localhost:8080/comment", {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -76,7 +76,7 @@ const SendComment = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/comment",
+        "https://localhost:8080/comment",
         commentData,
         {
           headers: {
@@ -108,7 +108,7 @@ const SendComment = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/upload",
+        "https://localhost:8080/api/v1/upload",
         formData,
         {
           headers: {

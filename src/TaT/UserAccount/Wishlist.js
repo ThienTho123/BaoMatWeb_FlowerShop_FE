@@ -16,7 +16,7 @@ const Wishlist = () => {
     setError("");
     setSuccess(""); // Reset success message trước khi tải lại danh sách
     try {
-      const response = await axios.get("http://localhost:8080/wishlist", {
+      const response = await axios.get("https://localhost:8080/wishlist", {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -37,7 +37,7 @@ const Wishlist = () => {
       console.log("ID = " + id);
       try {
         // Gửi yêu cầu xóa sản phẩm
-        await axios.delete(`http://localhost:8080/wishlist/${id}`, {
+        await axios.delete(`https://localhost:8080/wishlist/${id}`, {
           headers: {
             Authorization: `Bearer ${access_token}`,
           },

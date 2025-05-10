@@ -39,7 +39,7 @@ const SendCommentDetail = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/comment/${id}`,
+        `https://localhost:8080/comment/${id}`,
         repCommentDTO,
         {
           headers: {
@@ -68,7 +68,7 @@ const SendCommentDetail = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:8080/comment/${comment.commentID}/complete`,
+        `https://localhost:8080/comment/${comment.commentID}/complete`,
         {},
         {
           headers: {
@@ -98,7 +98,7 @@ const SendCommentDetail = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/upload",
+        "https://localhost:8080/api/v1/upload",
         formData,
         {
           headers: {
@@ -120,7 +120,7 @@ const SendCommentDetail = () => {
   const getCommentDetail = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/comment/${id}`,
+        `https://localhost:8080/comment/${id}`,
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

@@ -42,7 +42,7 @@ const Header = () => {
 
   const handleLoginClick = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/info", {
+      const response = await axios.get("https://localhost:8080/info", {
         headers: {
           "Account-ID": accountId,
         },
@@ -61,7 +61,7 @@ const Header = () => {
     const fetchCartData = async () => {
       if (accesstoken) {
         try {
-          const response = await axios.get("http://localhost:8080/prebuy", {
+          const response = await axios.get("https://localhost:8080/prebuy", {
             headers: {
               Authorization: `Bearer ${accesstoken}`,
               "Account-ID": accountId,
@@ -89,7 +89,7 @@ const Header = () => {
   const handleSearch = async () => {
     if (searchTerm.trim()) {
       try {
-        const response = await axios.get("http://localhost:8080/search", {
+        const response = await axios.get("https://localhost:8080/search", {
           params: { searchTerm }, // Truyền searchTerm đến backend
           headers: { "Account-ID": accountId },
         });
@@ -108,7 +108,7 @@ const Header = () => {
 
   const handlePrebuy = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/cart", {
+      const response = await axios.get("https://localhost:8080/cart", {
         headers: {
           "Account-ID": accountId,
         },

@@ -31,7 +31,7 @@ const NeedShip = () => {
   const getCommentInfo = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/shipperaccount/haveship",
+        "https://localhost:8080/shipperaccount/haveship",
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

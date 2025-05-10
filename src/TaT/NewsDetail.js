@@ -10,7 +10,7 @@ export default function NewsDetail() {
   useEffect(() => {
     const fetchNewsDetail = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/news/${id}`);
+        const response = await axios.get(`https://localhost:8080/news/${id}`);
         setNews(response.data);
       } catch (error) {
         console.error("Error fetching news details:", error);

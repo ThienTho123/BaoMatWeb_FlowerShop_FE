@@ -25,7 +25,7 @@ const StaffFlower = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/staff/flower", {
+        const response = await fetch("https://localhost:8080/api/v1/staff/flower", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -60,7 +60,7 @@ const StaffFlower = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -93,7 +93,7 @@ const StaffFlower = () => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/staff/flower/${id}`, {
+      const response = await fetch(`https://localhost:8080/api/v1/staff/flower/${id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -128,7 +128,7 @@ const StaffFlower = () => {
     }
     try {
       const formattedData = { ...newFlower };
-      const response = await fetch("http://localhost:8080/api/v1/staff/flower", {
+      const response = await fetch("https://localhost:8080/api/v1/staff/flower", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -170,7 +170,7 @@ const StaffFlower = () => {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/staff/flower/softdelete/${id}`,
+        `https://localhost:8080/api/v1/staff/flower/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {

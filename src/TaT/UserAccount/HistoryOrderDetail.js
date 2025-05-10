@@ -29,7 +29,7 @@ const HistoryOrderDetail = () => {
   const getHistoryOrder = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/account/orderHistory/${id}`,
+        `https://localhost:8080/account/orderHistory/${id}`,
         {
           headers: {
             Authorization: `Bearer ${access_token}`,

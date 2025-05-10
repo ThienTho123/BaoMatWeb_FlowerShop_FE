@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/forgot-password",
+        "https://localhost:8080/api/v1/auth/forgot-password",
         { username },  // Send the username in the request body
         {
           headers: {

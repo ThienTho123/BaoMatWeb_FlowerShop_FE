@@ -27,7 +27,7 @@ const AdminFlower = () => {
   useEffect(() => {
     const fetchFlowers = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/flower", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/flower", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -63,7 +63,7 @@ const AdminFlower = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,
@@ -92,7 +92,7 @@ const AdminFlower = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/flower/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/flower/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -119,7 +119,7 @@ const AdminFlower = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/flower/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/flower/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -147,7 +147,7 @@ const AdminFlower = () => {
       console.log("Data to be saved (Edit):", JSON.stringify(formattedData));
 
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/flower/${id}`,
+        `https://localhost:8080/api/v1/admin/flower/${id}`,
         {
           method: "PUT",
           headers: {
@@ -184,7 +184,7 @@ const AdminFlower = () => {
       };
       console.log("Data to be created (New Flower):", JSON.stringify(formattedData));
 
-      const response = await fetch("http://localhost:8080/api/v1/admin/flower", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/flower", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

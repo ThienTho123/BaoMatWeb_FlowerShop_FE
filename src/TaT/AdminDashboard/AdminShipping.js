@@ -20,7 +20,7 @@ const AdminShipping = () => {
   useEffect(() => {
     const fetchShippings = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/shipping", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/shipping", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -50,7 +50,7 @@ const AdminShipping = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/shipping/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/shipping/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -77,7 +77,7 @@ const AdminShipping = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/shipping/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/shipping/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -132,7 +132,7 @@ const AdminShipping = () => {
   
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/shipping/${id}`,
+        `https://localhost:8080/api/v1/admin/shipping/${id}`,
         {
           method: "PUT",
           headers: {
@@ -191,7 +191,7 @@ const AdminShipping = () => {
     console.log("Creating Shipping:", JSON.stringify(shippingData, null, 2));
   
     try {
-      const response = await fetch("http://localhost:8080/api/v1/admin/shipping", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/shipping", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

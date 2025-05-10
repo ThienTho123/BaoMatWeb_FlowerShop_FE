@@ -17,7 +17,7 @@ const WaitingComment = () => {
   };
   const getCommentInfo = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/staff", {
+      const response = await axios.get("https://localhost:8080/staff", {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },

@@ -29,7 +29,7 @@ const OrderDetail = () => {
   };
   const getHistoryOrder = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/shipper/${id}`, {
+      const response = await axios.get(`https://localhost:8080/shipper/${id}`, {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -74,7 +74,7 @@ const OrderDetail = () => {
     try {
       // Gửi yêu cầu POST với dữ liệu chuỗi thuần túy cho "note"
       const response = await axios.post(
-        `http://localhost:8080/shipper/${id}/receive`, // Đảm bảo URL không có mã hóa
+        `https://localhost:8080/shipper/${id}/receive`, // Đảm bảo URL không có mã hóa
         { note: note }, // Truyền chuỗi 'note' bình thường trong body JSON
         {
           headers: {

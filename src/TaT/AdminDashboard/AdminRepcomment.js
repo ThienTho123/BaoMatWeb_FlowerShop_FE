@@ -23,7 +23,7 @@ const AdminRepcomment = () => {
   useEffect(() => {
     const fetchRepComments = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/repcomment", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/repcomment", {
           headers: { Authorization: `Bearer ${accesstoken}` },
           credentials: "include",
         });
@@ -54,7 +54,7 @@ const AdminRepcomment = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/upload", {
+      const response = await fetch("https://localhost:8080/api/v1/upload", {
         method: "POST",
         headers: { Authorization: `Bearer ${accesstoken}` },
         credentials: "include",
@@ -78,7 +78,7 @@ const AdminRepcomment = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/repcomment/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/repcomment/softdelete/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${accesstoken}` },
@@ -103,7 +103,7 @@ const AdminRepcomment = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/repcomment/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/repcomment/harddelete/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${accesstoken}` },
@@ -172,7 +172,7 @@ const AdminRepcomment = () => {
       console.log("JSON data to be sent for edit:", JSON.stringify(payload, null, 2));
   
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/repcomment/${id}`,
+        `https://localhost:8080/api/v1/admin/repcomment/${id}`,
         {
           method: "PUT",
           headers: {
@@ -217,7 +217,7 @@ const AdminRepcomment = () => {
       };
   
       console.log("JSON data to be sent for creation:", JSON.stringify(payload, null, 2));
-      const response = await fetch("http://localhost:8080/api/v1/admin/repcomment", {
+      const response = await fetch("https://localhost:8080/api/v1/admin/repcomment", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accesstoken}`,

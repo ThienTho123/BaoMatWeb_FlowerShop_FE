@@ -26,7 +26,7 @@ const AdminDiscount = () => {
   useEffect(() => {
     const fetchDiscounts = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/admin/discount", {
+        const response = await fetch("https://localhost:8080/api/v1/admin/discount", {
           headers: {
             Authorization: `Bearer ${accesstoken}`,
           },
@@ -55,7 +55,7 @@ const AdminDiscount = () => {
   const handleDeleteSoft = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/discount/softdelete/${id}`,
+        `https://localhost:8080/api/v1/admin/discount/softdelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -104,7 +104,7 @@ const AdminDiscount = () => {
   const handleDeleteHard = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/discount/harddelete/${id}`,
+        `https://localhost:8080/api/v1/admin/discount/harddelete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -152,7 +152,7 @@ const AdminDiscount = () => {
       console.log(`JSON gửi đi khi cập nhật giảm giá ID ${id}:`, JSON.stringify(formattedData, null, 2));
   
       const response = await fetch(
-        `http://localhost:8080/api/v1/admin/discount/${id}`,
+        `https://localhost:8080/api/v1/admin/discount/${id}`,
         {
           method: "PUT",
           headers: {
@@ -238,7 +238,7 @@ const AdminDiscount = () => {
         );
 
         const response = await fetch(
-            "http://localhost:8080/api/v1/admin/discount",
+            "https://localhost:8080/api/v1/admin/discount",
             {
                 method: "POST",
                 headers: {

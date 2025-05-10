@@ -27,7 +27,7 @@ const VerifyOtp = () => {
     
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/verify-otp",
+        "https://localhost:8080/api/v1/auth/verify-otp",
         { username, otp, newPassword },  // Gửi dữ liệu trong body của request
         {
           headers: {
