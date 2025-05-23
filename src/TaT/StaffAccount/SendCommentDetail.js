@@ -265,9 +265,7 @@ const StaffCommentDetail = () => {
             <li key={repComment.repcommentID} className="repcomment-item">
               <div className="repcomment-header">
                 <img
-                  src={
-                    repComment.avatarRep || "httpss://via.placeholder.com/40"
-                  }
+                  src={repComment.avatarRep || "https://via.placeholder.com/40"}
                   alt="Avatar"
                   className="repcomment-avatar"
                 />

@@ -29,7 +29,7 @@ const PaymentFailure = () => {
         }}
       >
         <img
-          src="httpss://img.icons8.com/ios-filled/50/ff4d4d/multiply.png"
+          src="https://img.icons8.com/ios-filled/50/ff4d4d/multiply.png"
           alt="Failure Icon"
           style={{ width: "60px", marginBottom: "20px" }}
         />

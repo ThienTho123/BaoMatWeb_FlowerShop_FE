@@ -65,7 +65,7 @@ const Login = () => {
 
         // Gọi Google User Info API
         const userInfoResponse = await axios.get(
-          "httpss://www.googleapis.com/oauth2/v3/userinfo",
+          "https://www.googleapis.com/oauth2/v3/userinfo",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

@@ -29,7 +29,7 @@ const PaymentSuccess = () => {
         }}
       >
         <img
-          src="httpss://img.icons8.com/ios-filled/50/4caf50/checkmark.png"
+          src="https://img.icons8.com/ios-filled/50/4caf50/checkmark.png"
           alt="Success Icon"
           style={{ width: "60px", marginBottom: "20px" }}
         />

@@ -635,7 +635,7 @@ const ProductDetail = () => {
               <li>
                 <Link to="/">Trang chủ</Link>
                 <img
-                  src="httpss://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/966fbe37fe1c72e3f2dd.svg"
+                  src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/966fbe37fe1c72e3f2dd.svg"
                   alt="Arrow Icon"
                   className="icon-arrow"
                 />
@@ -643,7 +643,7 @@ const ProductDetail = () => {
               <li>
                 <Link to="/product">Danh mục sản phẩm</Link>
                 <img
-                  src="httpss://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/966fbe37fe1c72e3f2dd.svg"
+                  src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/966fbe37fe1c72e3f2dd.svg"
                   alt="Arrow Icon"
                   className="icon-arrow"
                 />
@@ -656,7 +656,7 @@ const ProductDetail = () => {
                     {product.categoryID.categoryName}
                   </Link>
                   <img
-                    src="httpss://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/966fbe37fe1c72e3f2dd.svg"
+                    src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/966fbe37fe1c72e3f2dd.svg"
                     alt="Arrow Icon"
                     className="icon-arrow"
                   />

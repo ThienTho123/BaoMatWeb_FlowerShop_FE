@@ -83,7 +83,7 @@ const HomePage = () => {
         <div className="policies-box">
           <div className="policy-item">
             <img
-              src="httpss://cdn-icons-png.flaticon.com/128/3706/3706340.png"
+              src="https://cdn-icons-png.flaticon.com/128/3706/3706340.png"
               alt="Miễn phí vận chuyển"
               className="legit-image"
             />
@@ -91,7 +91,7 @@ const HomePage = () => {
           </div>
           <div className="policy-item">
             <img
-              src="httpss://cdn-icons-png.flaticon.com/128/4098/4098381.png"
+              src="https://cdn-icons-png.flaticon.com/128/4098/4098381.png"
               alt="Hoa tươi mọi ngày"
               className="legit-image"
             />
@@ -99,7 +99,7 @@ const HomePage = () => {
           </div>
           <div className="policy-item">
             <img
-              src="httpss://cdn-icons-png.flaticon.com/128/2769/2769339.png"
+              src="https://cdn-icons-png.flaticon.com/128/2769/2769339.png"
               alt="Giao quà tận nơi"
               className="legit-image"
             />
